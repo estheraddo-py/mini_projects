@@ -16,7 +16,7 @@ def format_address(address_string):
       break
 
   for word in street_name:
-    if word.isalpha():
+    if word.isalpha() and word.endswith(('st','th','rd'))::
       street_name_str = street_name_str +" "+ word
   
   # Return the formatted string  
