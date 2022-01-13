@@ -7,13 +7,12 @@ def format_address(address_string):
   # Separate the address string into parts
   
   separate_strings = address_string.split()
-  #return separate_strings
+ 
   street_name = separate_strings[1:]
   house_number = separate_strings[0]
   
   for number in house_number:
-    if number.isnumeric():
-      house_number += number
+    if number.isnumeric()
       break
 
   for word in street_name:
