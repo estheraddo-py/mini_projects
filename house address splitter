@@ -1,0 +1,41 @@
+def format_address(address_string):
+  # Declare variables
+  separate_strings = "" #for separating strings
+  street_name  = ""    
+  street_name_str = ""
+  house_number = ""
+  # Separate the address string into parts
+  
+  separate_strings = address_string.split()
+  #return separate_strings
+  street_name = separate_strings[1:]
+  house_number = separate_strings[0]
+  
+  for number in house_number:
+    if number.isnumeric():
+      house_number += number
+      break
+
+  for word in street_name:
+    if word.isalpha():
+      street_name_str = street_name_str +" "+ word
+      
+  # Traverse through the address parts
+  
+    # Determine if the address part is the
+    # house number or part of the street name
+
+  # Does anything else need to be done 
+  # before returning the result?
+  
+  # Return the formatted string  
+  return "house number {} on street named {}".format(house_number,street_name_str)
+
+print(format_address("123 Main Street"))
+# Should print: "house number 123 on street named Main Street"
+
+print(format_address("1001 1st Ave"))
+# Should print: "house number 1001 on street named 1st Ave"
+
+print(format_address("55 North Center Drive"))
+# Should print "house number 55 on street named North Center Drive"
